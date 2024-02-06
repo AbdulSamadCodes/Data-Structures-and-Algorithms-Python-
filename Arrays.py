@@ -148,9 +148,47 @@
 
 
 
+#-------Q:You have been an integer arraylist of size N.Where N is equal to  (2M + 1).You need to find and return number which is unique.
+
+# def uniqueNumber(array):
+#     n = len(array)
+#     unique = 0
+#     for i in range(n):
+#         unique ^= array[i]
+#     return unique
 
 
-      
+# array = [3 , 7 , 2 , 2 , 3 ,7 , 4]
+# array2 = [5 , 5 , 100 , 7 , 7 ,9 ,9]
+# print(uniqueNumber(array))
+# print(uniqueNumber(array2))
+
+
+#-------Q:Given an array of integer arr , return true if the number of ocurrences  of each element is unique,false otherwise.
+
+def haveUniqueOccurrences(arr):
+    n = len(arr)
+    countDict =  dict()
+    for i in range(n):
+        if countDict.get(arr[i]):
+            countDict[arr[i]] += 1
+        else:
+            countDict[arr[i]] = 1    
+    return len(countDict) == len(set(countDict.values()))   
+
+array = [1 , 2 , 2 , 1 , 1 , 3]    
+array2 = [2,1,3]
+print(haveUniqueOccurrences(array))  
+print(haveUniqueOccurrences(array2))
+        
+
+
+
+
+
+
+
+
 
 
 
