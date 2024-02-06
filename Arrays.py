@@ -130,6 +130,25 @@
 # print(result)
 
 
+#--Q:You are  given an array of numbers.Swap the alternate elemnets.
+
+# def  swapAlternate(array):
+#     n = len(array)
+#     i = 0
+#     while i <= n - 2:
+#         array[i] , array[i + 1] = array[i + 1] , array[i]
+#         i = i + 2
+#     return array
+
+
+# array = [1,2,5,7,9]
+# array2 = [1 , 3 , 2 , 7 , 11 , 8]
+# print(swapAlternate(array))    
+# print(swapAlternate(array2))
+
+
+
+
 
       
 
