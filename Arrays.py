@@ -166,20 +166,55 @@
 
 #-------Q:Given an array of integer arr , return true if the number of ocurrences  of each element is unique,false otherwise.
 
-def haveUniqueOccurrences(arr):
-    n = len(arr)
-    countDict =  dict()
-    for i in range(n):
-        if countDict.get(arr[i]):
-            countDict[arr[i]] += 1
-        else:
-            countDict[arr[i]] = 1    
-    return len(countDict) == len(set(countDict.values()))   
+# def haveUniqueOccurrences(arr):
+#     n = len(arr)
+#     countDict =  dict()
+#     for i in range(n):
+#         if countDict.get(arr[i]):
+#             countDict[arr[i]] += 1
+#         else:
+#             countDict[arr[i]] = 1    
+#     return len(countDict) == len(set(countDict.values()))   
 
-array = [1 , 2 , 2 , 1 , 1 , 3]    
-array2 = [2,1,3]
-print(haveUniqueOccurrences(array))  
-print(haveUniqueOccurrences(array2))
+# array = [1 , 2 , 2 , 1 , 1 , 3]    
+# array2 = [2,1,3]
+# print(haveUniqueOccurrences(array))  
+# print(haveUniqueOccurrences(array2))
+
+
+#-----------------------Leetcode Question--------------#/
+
+#Q:You are given an array of inetegrs containing each number from 1 to n-1.Where n is the length of array.But there is one number which is present twice.Find and return that number.
+
+# def findDuplicate(array , n):
+#     ans = 0
+#     for i in range(n):
+#         ans = ans ^ array[i]
+#     for j in range(1,n):
+#         ans = ans ^ j
+#     return ans
+
+# array = [1,2,3,5,6,4,6]
+# n = len(array)
+# print(findDuplicate(array , n))
+
+def findMin(arr, n):
+        start = 0
+        end = n - 1
+        while start <= end:
+            mid = start + (end - start) // 2
+            if arr[0] < arr[mid]:
+                start = mid + 1
+            else:
+                end = mid 
+        return start  
+
+print(findMin([4 ,5 ,1 ,2 ,3] , 5))
+
+
+
+
+
         
 
 
