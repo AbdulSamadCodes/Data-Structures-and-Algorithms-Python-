@@ -198,20 +198,71 @@
 # n = len(array)
 # print(findDuplicate(array , n))
 
-def findMin(arr, n):
-        start = 0
-        end = n - 1
-        while start <= end:
-            mid = start + (end - start) // 2
-            if arr[0] < arr[mid]:
-                start = mid + 1
-            else:
-                end = mid 
-        return start  
-
-print(findMin([4 ,5 ,1 ,2 ,3] , 5))
 
 
+#Q:-----------You are  given two sorted  arrays arr1 and arr2 both of them are in non-decreaasing order.You need to find the return a list of instersected elements,if there is no such return -1.
+
+# def arrayIntersection(arr1 , arr2):
+#     n = len(arr1)
+#     m = len(arr2)
+#     i = 0
+#     j = 0
+#     ans = []
+
+#     while i < n and j < m:
+#         if arr1[i]  <  arr2[j]:
+#             i+=1
+#         elif arr1[i] == arr2[j]:
+#             ans.append(arr1[i])  
+#             i += 1          
+#             j += 1
+#         else:
+#             j+=1
+#     if not ans:        
+#       return -1
+#     else:
+#         return ans
+
+
+
+# array1 = [1,2,2,2,3,4]
+# array2 = [2,2,3,3]
+
+# array3 = [10,20,48,7]
+# array4 = [12,2,4,9]
+# print(arrayIntersection(array1 , array2))
+# print(arrayIntersection(array3,array4))
+
+
+#--------------------Important Question------------------
+
+
+# Given two arrays a[] and b[] respectively of size n and m, the task is to print the count of elements in the intersection (or common elements) of the two arrays.
+# For this question, the intersection of two arrays can be defined as the set containing distinct common elements between the two arrays. 
+
+# def NumberofElementsInIntersection(a, b, n, m):
+#     a = sorted(a)
+#     b = sorted(b)
+#     count = 0
+#     i = 0
+#     j = 0
+#     while i < n and j < m:
+#         if i > 0 and a[i] == a[i - 1]:
+#             i+=1
+#         if b[j] > a[i]:
+#             i+=1
+#         elif a[i] == b[j]:
+#             i+=1
+#             j+=1
+#             count+=1
+#         else:
+#             j+=1
+#     return count 
+    
+
+# array1 = [89, 24, 75, 11, 23]
+# array2 = [89, 2, 4]
+# print(NumberofElementsInIntersection(array1 , array2 , 5 , 3))
 
 
 

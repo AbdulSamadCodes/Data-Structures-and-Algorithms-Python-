@@ -1,5 +1,8 @@
 
-#----Sort an unsorted array of  N non-negative integers using selection sort.
+#Selection sort is simple sorting algorithm.Its time complexity is O(n^2) where n is the size of the array.
+
+
+#Q:Sort an unsorted array of  N non-negative integers using selection sort.
 
 # def selectionSort(arr , n):
 #     for i in range(n - 1):

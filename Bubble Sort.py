@@ -1,3 +1,5 @@
+#Bubble sort is simple sorting algorithm.Its time complexity is O(n^2) where n is the size of the array.
+
 #-------------Given an Integer n which is the length of array and a list arr. Sort the array using bubble sort algorithm.-------------
 
 # def bubbleSort(arr , n):

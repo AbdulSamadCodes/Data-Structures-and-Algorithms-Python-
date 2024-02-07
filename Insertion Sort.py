@@ -21,6 +21,7 @@ def insert(alist, index, n):
         j = index - 1
         while j >= 0 and alist[j] > temp:
             alist[j + 1] = alist[j]
+            j = j -1 
         return j    
 
 def insertionSort(alist, n):
