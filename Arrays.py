@@ -265,6 +265,31 @@
 # print(NumberofElementsInIntersection(array1 , array2 , 5 , 3))
 
 
+#Q:You are given an array of integer array of size N and ineteger S.Your task is to return the list  of all element pair whose sum is equal to S.It should return pairs of sum in a sorted order
+
+# def pairSum(arr , n , S):
+#     ans = []
+#     for i in range(len(arr)):
+#         for j in range(i + 1 , len(arr)):
+#             if arr[i] + arr[j] == S:
+#                 ans.append([arr[i] , arr[j]])
+                    
+#     for i in range(len(ans)):
+#         ans[i].sort()
+#     return ans    
+
+
+# array = [11,5,12,45,6,17,0]
+# S = 17
+# n = len(array)
+# print(pairSum(array , n , S))
+
+
+
+
+
+
+
 
         
 
