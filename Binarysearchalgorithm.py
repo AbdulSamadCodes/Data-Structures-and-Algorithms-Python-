@@ -310,8 +310,7 @@
 #                    return True
 #                lastPosition = arr[i]
 #         return False       
-                
-    
+                    
 #     start = 0
 #     maxi = max(arr)
 #     mini = min(arr)

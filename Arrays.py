@@ -28,34 +28,39 @@
 # array = [10,10,10,10,10,20,10]
 # print(uniqueelem(array)) 
 
-# Write a  function to insert a value at a given index in an array
+# Write a  function to insert a value at a given position in an array
+ 
+# def insertion(arr , pos , item , n , filled):
+#      j = filled - 1
+#      while (pos - 1 <= j):
+#           arr[j + 1] = arr[j]
+#           j = j - 1
+#      arr[pos - 1]   = item
+#      n = n + 1  
 
-# def insertion_in_array(array,n,index,value):
-#     j = n - 1
-#     while j >= index:
-#         array[j + 1] = array[j]
-#         j = j - 1
-#     array[index] = value
-#     n = n + 1
+# array = [1 ,2 , 3 , 0 , 0 , 0]
+# n = len(array) - 1
+#insertion(array ,2, 45 , n , 3)
+# print(array)           
 
-# array = [10,20,30,40,50,60,0]
-# insertion_in_array(array,6,2,80)
-# print(array)
 
-# Write a  function to delete a value at a given index in an array
+# Write a  function to delete a value at a given position in an array
 
-# def deletion_in_array(array,index,n):
-#     value = array[index]
-#     j = index
-#     for i in range(j,n):
-#         array[i] =  array[i + 1]
+# def deletion(arr , n , pos):
+#     value = arr[pos - 1]
+#     j = pos - 1
+#     while j < n - 1:
+#         arr[j] = arr[j + 1]
+#         j = j + 1
 #     n = n - 1
 
-# array = [10,56,78,97,45,1]
-# deletion_in_array(array,2,5)
-# print(array)
+# array = [34 , 56 ,67, 0]
+# n = len(array)
+# deletion(array , n , 2)
+# print(array)        
+   
 
-
+   
 #Q Wrie a function program to find a single  duplicate value in an array
 
 # def duplicatevalues(array):
@@ -283,6 +288,128 @@
 # S = 17
 # n = len(array)
 # print(pairSum(array , n , S))
+
+
+#Q:---You have been array of 0s and 1s . Sort it such that all 0s come to left and all 1s come to right.
+
+# def sort(arr , n):
+#     left = 0
+#     right = n - 1
+
+#     while left < right:
+#         while arr[left] == 0 and left < right:
+#             left+=1
+#         while arr[right] == 1 and left < right:
+#             right-=1
+#         if arr[left] == 1 and arr[right] == 0 and left < right:       
+#             arr[left] , arr[right] = arr[right] , arr[left]
+#             left+=1
+#             right-=1
+    
+#     return arr
+
+# array = [0,0,1,1,0,0,0,1,1,0,0]
+# n = len(array)
+# print(sort(array, n))        
+                    
+
+#Q:---Reverse the given array.
+
+# def reverseArray(array , n):
+#     left = 0
+#     right = n - 1
+#     while (left < right):
+#         array[left] , array[right] = array[right]  , array[left]
+#         left+=1
+#         right-=1
+#     return array
+
+
+# arr = [10,23,45,67,89,9]
+# n = len(arr)
+# print(reverseArray(arr , n))
+
+#-----------------Leetcode Prolem-----------
+
+
+#Q:Given two sorted arrays mege them in a third array in a sorted order.
+
+# def mergeSortedArrays(arr1 , arr2 , n , m):
+#     i = 0
+#     j = 0
+#     ans = []
+#     while (i < n and j < m):
+#         if arr1[i] < arr2[j]:
+#             ans.append(arr1[i])
+#             i+=1
+#         else:
+#             ans.append(arr2[j])
+#             j+=1
+#     while i < n:
+#         ans.append(arr1[i])
+#         i+=1
+#     while j < m:
+#         ans.append(arr2[j])
+#         j+=1
+#     return ans
+
+# array1 = [70,89,1000]
+# array2 = [2 , 6 , 9] 
+# n = len(array1)
+# m = len(array2)
+
+# print(mergeSortedArrays(array1 , array2 , n , m))
+
+
+#Q:You are given two sorted arrays.Merge ten such that the result should be stored in first array itsef.The empty spaces in the first array will be equal to the length m of second array.
+
+
+
+
+
+
+#Q:You are given an array of integer,move all zeroes in it to the end and you have to do it while mantaining the relative order of non-zero elements.
+
+# def moveZeroes(arr , n):
+#     i = 0
+#     for j in range(n):
+#         if arr[j] != 0:
+#             arr[i] , arr[j] = arr[j] , arr[i]
+#             i+=1
+#     return arr
+
+# array = [1,2,0,34,45,0,0,0]
+# n = len(array)
+# print (moveZeroes(array , n))        
+
+#------------------------Important Leetcode Question----------------
+
+#Q:--------Given an array , rotate the array by x steps 
+
+
+# def rotateArray(arr , n  , k):
+#     temp = [0] * n
+#     for i in range(n):
+#        temp[(i + k) % n] = arr[i]
+#     arr = temp
+#     return arr 
+
+# array = [11,12,45,67]
+# n = len(array)
+# k = 2
+# print(rotateArray(array , n , k))
+
+
+
+
+
+
+
+
+
+               
+               
+    
 
 
 

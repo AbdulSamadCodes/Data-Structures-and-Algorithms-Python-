@@ -16,24 +16,6 @@
 # n = len(array)
 # print(insertionSort(array,n))    
 
-def insert(alist, index, n):
-        temp = alist[index]
-        j = index - 1
-        while j >= 0 and alist[j] > temp:
-            alist[j + 1] = alist[j]
-            j = j -1 
-        return j    
-
-def insertionSort(alist, n):
-    for i in range(n):
-        position = insert(alist , i , n)
-        alist[position + 1] = alist[i]
-    return alist   
-    
-
-array = [56 ,  6 , 7 , 87 , 9]
-n = len(array)
-print(insertionSort(array,n))   
 
 
 
