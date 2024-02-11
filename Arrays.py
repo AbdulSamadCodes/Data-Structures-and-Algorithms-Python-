@@ -401,6 +401,25 @@
 
 
 
+#------------------------Important Leetcode Question----------------
+
+#--Q:Given an array nums , return true if the array was originally sorted in non-decreasing order , then was rotated
+#by some number of positions(including zero).Otherwise return fasle.
+
+
+def checkSortedRotated(array):
+    count = 0
+    n = len(array)
+    for i in range(1,n):
+        if array[i] < array[i - 1]:
+            count+=1
+    if array[n - 1] > array[0]:
+        count+=1
+    return count  == 1
+
+
+array = [3,4,5,1,2]
+print(checkSortedRotated(array))
 
 
 
