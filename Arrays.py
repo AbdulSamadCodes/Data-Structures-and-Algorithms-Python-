@@ -407,24 +407,68 @@
 #by some number of positions(including zero).Otherwise return fasle.
 
 
-def checkSortedRotated(array):
-    count = 0
-    n = len(array)
-    for i in range(1,n):
-        if array[i] < array[i - 1]:
-            count+=1
-    if array[n - 1] > array[0]:
-        count+=1
-    return count  == 1
+# def checkSortedRotated(array):
+#     count = 0
+#     n = len(array)
+#     for i in range(1,n):
+#         if array[i] < array[i - 1]:
+#             count+=1
+#     if array[n - 1] > array[0]:
+#         count+=1
+#     return count  == 1
 
 
-array = [3,4,5,1,2]
-print(checkSortedRotated(array))
-
-
+# array = [3,4,5,1,2]
+# print(checkSortedRotated(array))
 
 
 
+#:Q:--Given two array A[0….N-1] and B[0….M-1] of size N and M respectively, representing two numbers such that every element of arrays represent a digit. For example, A[] = { 1, 2, 3} and B[] = { 2, 1, 4 } represent 123 and 214 respectively. The task is to find the sum of both the numbers.---
+
+# def calc_Sum (arr,  n, brr, m) : 
+#     i = n -1
+#     j = m -1
+#     carry = 0
+#     ans = []
+        
+#     while(i >= 0  and j >= 0):
+#         Sum = arr[i] + brr[j] + carry
+#         carry = Sum // 10
+#         Sum = Sum % 10
+#         ans.append(Sum)
+#         i-=1
+#         j-=1
+            
+#     while i >= 0:
+#         Sum = arr[i] +  carry
+#         carry = Sum // 10
+#         Sum = Sum % 10
+#         ans.append(Sum)
+#         i-=1
+            
+#     while j >= 0:
+#         Sum = brr[j] +  carry
+#         carry = Sum // 10
+#         Sum = Sum % 10
+#         ans.append(Sum)
+#         j-=1
+       
+#     while carry != 0:
+#         Sum = carry
+#         carry = Sum // 10
+#         Sum = Sum % 10
+#         ans.append(Sum)
+            
+#     ans.reverse()
+#     result = int(''.join(map(str , ans)))
+#     return result
+
+
+# array1 = [3,7,2,8,5,9]
+# n = len(array1)
+# array2= [4,9,9,6,8]
+# m = len(array2)
+# print(calc_Sum(array1 , n , array2 , m))
 
                
                
