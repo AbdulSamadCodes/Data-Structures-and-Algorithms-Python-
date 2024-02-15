@@ -36,57 +36,57 @@
 
 #----------Given two strings s1 and s2 , return true if s2 contains a pernutation of s1 , or false otherwise.
 
-def checkPermutation(s1 , s2):
+# def checkPermutation(s1 , s2):
 
-    #Method for checking if windows are equal
+#     #Method for checking if windows are equal
 
-    def isEqual(array1 , array2):
-        for i in range(26):
-            if array1[i] != array2[i]:
-                return False
-        return True    
+#     def isEqual(array1 , array2):
+#         for i in range(26):
+#             if array1[i] != array2[i]:
+#                 return False
+#         return True    
     
-    #Counting the characters in s1
-    count1 = [0] * 26
-    for i in range(len(s1)):
-        index = ord(s1[i]) - ord('a')
-        count1[index]+=1
+#     #Counting the characters in s1
+#     count1 = [0] * 26
+#     for i in range(len(s1)):
+#         index = ord(s1[i]) - ord('a')
+#         count1[index]+=1
 
-    #Counting the characters in s2 and traversing the firstwindow
-    i = 0
-    windowSize = len(s1)
-    count2 = [0] * 26    
+#     #Counting the characters in s2 and traversing the firstwindow
+#     i = 0
+#     windowSize = len(s1)
+#     count2 = [0] * 26    
         
-    while i < windowSize and i < len(s2):
-        index = ord(s2[i]) - ord('a')
-        count2[index]+=1
-        i+=1
+#     while i < windowSize and i < len(s2):
+#         index = ord(s2[i]) - ord('a')
+#         count2[index]+=1
+#         i+=1
     
-    if isEqual(count1 , count2):
-        return 1
+#     if isEqual(count1 , count2):
+#         return 1
     
-    #Now traversing for remainin windows
+#     #Now traversing for remainin windows
 
-    while(i < len(s2)):
-        newChar = s2[i]
-        index = ord(newChar) - ord('a')
-        count2[index]+=1
+#     while(i < len(s2)):
+#         newChar = s2[i]
+#         index = ord(newChar) - ord('a')
+#         count2[index]+=1
 
-        oldChar = s2[i - windowSize]
-        index = ord(oldChar) - ord('a')
-        count2[index]-=1
+#         oldChar = s2[i - windowSize]
+#         index = ord(oldChar) - ord('a')
+#         count2[index]-=1
 
-        i+=1
+#         i+=1
 
-        if isEqual(count1 , count2):
-            return 1
+#         if isEqual(count1 , count2):
+#             return 1
 
-    return 0    
+#     return 0    
 
 
-string1 = "ab"
-string2 = "eidbaooo"
-print(checkPermutation(string1 , string2))
+# string1 = "ab"
+# string2 = "eidbaooo"
+# print(checkPermutation(string1 , string2))
 
 
 
