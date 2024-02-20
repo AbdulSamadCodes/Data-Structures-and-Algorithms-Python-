@@ -279,7 +279,7 @@
 #     start  = max(arr)
 #     end = sum(arr)
 #     while start <= end:
-#         mid = start + (end - start  2) // 2
+#         mid = start + (end - start) // 2
 #         if isPossible(mid) > k:
 #             start = mid + 1
 #         else:
