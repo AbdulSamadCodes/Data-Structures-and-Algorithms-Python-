@@ -470,6 +470,31 @@
 # m = len(array2)
 # print(calc_Sum(array1 , n , array2 , m))
 
+#----------------------Important leetcode problem---------------------------#
+
+#:Given an array A of positive integers. Your task is to find the leaders in the array. An element of array is a leader if it is greater than or equal to all the elements to its right side. The rightmost element is always a leader. 
+
+# def leaders(arr , n):
+#     result = []
+#     last = arr[n - 1]
+#     result.append(last)
+
+#     i = n - 2
+#     while i >= 0:
+#         if arr[i] > last:
+#          last = arr[i]
+#          result.append(arr[i])
+#         i-=1
+
+#     result.reverse()
+#     return result
+
+
+# array = [16,17,4,3,5,2]
+# n = len(array)
+# print(leaders(array , n))
+
+
                
                
     

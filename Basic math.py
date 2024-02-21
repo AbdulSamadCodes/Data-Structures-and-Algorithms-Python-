@@ -1,5 +1,83 @@
+#-----------------------------------Prime numbers and factors---------------------------------
 
-#Q:-------Given an integer n, return the number of prime numbers that are strictly less tahn n.
+#Q:-------Given an integer n, Check if the number is prime or not.
+
+# def checkPrime(n):
+#     count = 0
+#     i = 1
+#     while i * i <= n:
+#         if (n % i) == 0:
+#             count+=1
+#             if ((n / i) != i):
+#                 count+=1
+#         i+=1        
+#     return count == 2
+
+
+# print(checkPrime(29))#:Output:True
+
+
+#Q:---------Given an integer n, return the sum of its factors.
+
+# def factorsSum(n):
+#     sum = 0
+#     i = 1
+#     while i * i <= n:
+#         if (n % i == 0):
+#             sum+=i
+#             if ((n/ i) != i):
+#                 sum+= (int)(n / i)
+#         i+=1        
+#     return sum
+
+
+# print(factorsSum(38))#Output:60
+# print(factorsSum(46))#Output:72             
+
+#Q:-----------------Code forces problem-----------------
+
+#----You are given one integer number n. Find three distinct integers a,b,c such that 2≤a,b,c and a⋅b⋅c=n or say that it is impossible to do it-----.
+def threeIntegersProduct(n):
+    a = n
+    b = n
+    c = n
+  
+#:---Loop for finding a-----  
+    i= 2
+    while i * i <= n:
+        if n % i == 0:
+            a = i
+            break
+        i = i + 1
+
+#:---Loop for finding b-----
+
+    n = n / a
+
+    j = 2
+    while j * j <= n:
+        if (n % j == 0 and a != j):
+            b = min(b , j)
+        j = j + 1    
+
+    c = (int)(n / b)
+
+    if (a != b and b!= c and c > 1):
+        print("Yes possible")
+        print(a , b , c) 
+    else:
+        print("Not pissible")
+
+
+threeIntegersProduct(64)#:Output(2 , 4 , 8)
+threeIntegersProduct(90)#:Output:(2 , 3 , 15)
+threeIntegersProduct(32)#:Output:Not possible
+
+
+
+
+
+#Q:-------Given an integer n, return the number of prime numbers that are strictly less than n.
 
 #-------------------Using Seive of Erastothenes---------------
 
@@ -19,6 +97,13 @@
 #     return count
 
 # print(countPrimes(40))
+
+
+
+
+
+
+
 
 
 #Q:----------Find the Greatest common divisor / Highest common factor of two numbers by iterative approach.---------------
@@ -86,6 +171,8 @@
 # N = 9
 # M = ((10 ** 7) + 7)
 # print(modularExponentation(X , N , M))
+
+
 
 
 
