@@ -37,43 +37,41 @@
 #Q:-----------------Code forces problem-----------------
 
 #----You are given one integer number n. Find three distinct integers a,b,c such that 2≤a,b,c and a⋅b⋅c=n or say that it is impossible to do it-----.
-def threeIntegersProduct(n):
-    a = n
-    b = n
-    c = n
+# def threeIntegersProduct(n):
+#     a = n
+#     b = n
+#     c = n
   
-#:---Loop for finding a-----  
-    i= 2
-    while i * i <= n:
-        if n % i == 0:
-            a = i
-            break
-        i = i + 1
+# #:---Loop for finding a-----  
+#     i= 2
+#     while i * i <= n:
+#         if n % i == 0:
+#             a = i
+#             break
+#         i = i + 1
 
-#:---Loop for finding b-----
+# #:---Loop for finding b-----
 
-    n = n / a
+#     n = n / a
 
-    j = 2
-    while j * j <= n:
-        if (n % j == 0 and a != j):
-            b = min(b , j)
-        j = j + 1    
+#     j = 2
+#     while j * j <= n:
+#         if (n % j == 0 and a != j):
+#             b = min(b , j)
+#         j = j + 1    
 
-    c = (int)(n / b)
+#     c = (int)(n / b)
 
-    if (a != b and b!= c and c > 1):
-        print("Yes possible")
-        print(a , b , c) 
-    else:
-        print("Not pissible")
-
-
-threeIntegersProduct(64)#:Output(2 , 4 , 8)
-threeIntegersProduct(90)#:Output:(2 , 3 , 15)
-threeIntegersProduct(32)#:Output:Not possible
+#     if (a != b and b!= c and c > 1):
+#         print("Yes possible")
+#         print(a , b , c) 
+#     else:
+#         print("Not pissible")
 
 
+# threeIntegersProduct(64)#:Output(2 , 4 , 8)
+# threeIntegersProduct(90)#:Output:(2 , 3 , 15)
+# threeIntegersProduct(32)#:Output:Not possible
 
 
 
@@ -84,19 +82,111 @@ threeIntegersProduct(32)#:Output:Not possible
 # def countPrimes(n):
 #     count = 0
 #     primeNumbers = [True] * (n + 1) 
-
 #     primeNumbers[0] = False
 #     primeNumbers[1] = False
 #     for i in range(2 , n):
 #         if (primeNumbers[i]):
 #              count+=1
 #              j = (i * 2)
-#              while j < n:
+#              while j <= n:
 #                  primeNumbers[j] = False
 #                  j = j + i
 #     return count
 
 # print(countPrimes(40))
+
+
+#-------------------More optimize algorithm of  Seive of Erastothenes---------------
+
+#Q:------------Write a method to check if a number n is prime or not.
+
+# def checkPrimes(n):
+#     primeNumbers = [True] * (n + 1)
+#     i = 2
+#     while i * i <= n:
+#         if(primeNumbers[i]):
+#             j = i * i
+#             while j <= n:
+#                 primeNumbers[j] = False
+#                 j = j + i
+#         i = i + 1
+#     if primeNumbers[n]:
+#         return True
+#     else:
+#         return False
+       
+    
+# print(checkPrimes(31))#:Output:True
+# print(checkPrimes(13))#:Output:True
+# print(checkPrimes(99))#:Output:False
+
+
+
+#Q:--------------You are given an integer k , Find the kth prime number .Constrain is that k >= 5 * 10^6.
+
+# def findKthPrime(k):
+
+#     #---First Generating a sieve up to 10^8 because this is the highest we can store in an array in most programming languages.
+
+#     n = 100000000
+#     Sieve = [True] * (n + 1)
+#     i = 2
+#     while i * i <= n:
+#         if Sieve[i]:
+#             j = i * i
+#             while j <= n:
+#                 Sieve[j] = False
+#                 j += i
+#         i += 1
+
+#     # Once the sieve is generated, we need to find the last 5 * 10^6th prime number
+        
+#     limit = 5 * 1000000
+#     size = 1
+#     count = 0
+#     i = 2  # Reset i for the second loop
+#     while i <= n:
+#         if Sieve[i]:
+#             count += 1
+
+#         if count == limit:
+#             size = i
+#             break
+#         i += 1
+    
+#     # Now we have the size , we can store all the primes in a data structure.
+        
+#     result = [] 
+#     l = 2
+#     while l <= size:
+#         if Sieve[l]:
+#             result.append(l)
+
+#     #Now we can simply return the kth prime value which will at k - 1 index.
+
+#     return result[k - 1]        
+
+# print(findKthPrime(5))
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
