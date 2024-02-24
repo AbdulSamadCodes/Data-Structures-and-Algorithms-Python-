@@ -80,20 +80,20 @@
 #-------------------Using Seive of Erastothenes---------------
 
 # def countPrimes(n):
-#     count = 0
-#     primeNumbers = [True] * (n + 1) 
-#     primeNumbers[0] = False
-#     primeNumbers[1] = False
-#     for i in range(2 , n):
-#         if (primeNumbers[i]):
-#              count+=1
-#              j = (i * 2)
-#              while j <= n:
-#                  primeNumbers[j] = False
-#                  j = j + i
-#     return count
+# #     count = 0
+# #     primeNumbers = [True] * (n + 1) 
+# #     primeNumbers[0] = False
+# #     primeNumbers[1] = False
+# #     for i in range(2 , n):
+# #         if (primeNumbers[i]):
+# #              count+=1
+# #              j = (i * 2)
+# #              while j <= n:
+# #                  primeNumbers[j] = False
+# #                  j = j + i
+# #     return count
 
-# print(countPrimes(40))
+# # print(countPrimes(40))
 
 
 #-------------------More optimize algorithm of  Seive of Erastothenes---------------
@@ -169,32 +169,43 @@
 # print(findKthPrime(5))
 
 
+#:----------------Return an array containingg  the prime factorization of integer  n in O(n) worst case time complexity.----------------
+
+# def primeFactorization(n):
+#     ans = []
+#     i = 2
+#     while i <= n:
+#         while ( n % i== 0):
+#             ans.append(i)
+#             n = (int)(n / i)
+#         i+=1
+#     return ans
+
+
+# print(primeFactorization(48))
+# print(primeFactorization(13))
+
+#----We can modify the above algorithm in 0(sqrt(n)) complexity.
+
+# def primeFactorization(n):
+#     ans = []
+#     i = 2
+#     while i * i <= n:
+#         while(n % i == 0):
+#             ans.append(i)
+#             n = n / i
+#         i+=1
+#     if (n > 1):
+#         ans.append(n)    
+
+#     return ans
+
+# print(primeFactorization(100))
+# print(primeFactorization(19)) 
 
 
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#--------------------------Euclid algorithm--------------------
 
 #Q:----------Find the Greatest common divisor / Highest common factor of two numbers by iterative approach.---------------
 

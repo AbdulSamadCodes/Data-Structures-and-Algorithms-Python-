@@ -72,7 +72,7 @@
 #         count2[index]+=1
 
 #         oldChar = s2[i - windowSize]
-#         index = ord(oldChar) - ord('a')
+        # index = ord(oldChar) - ord('a')
 #         count2[index]-=1
 
 #         i+=1
@@ -81,7 +81,6 @@
 #             return 1
 
 #     return 0    
-
 
 # string1 = "ab"
 # string2 = "eidbaooo"
