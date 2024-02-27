@@ -25,7 +25,6 @@
 #              characterArray[ansIndex] = stringCount[k]
 #              ansIndex = ansIndex + 1
       
-
 #         i = j
 #     return ansIndex        
 
