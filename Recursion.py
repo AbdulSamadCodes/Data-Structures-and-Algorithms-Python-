@@ -60,6 +60,43 @@
 
 
 
+#-----Q:-------------Important leetcode problems---------------------
+
+#---Q:There are n stairs, a person standing at the bottom wants to reach the top. The person can climb either 1 stair or 2 stairs at a time. Count the number of ways, the person can reach the top.
+
+# def countWays(n):
+#     if n == 0:
+#         return 1
+#     if n < 0:
+#         return 0
+#     ans = countWays(n - 1) + countWays(n - 2)
+#     return ans
+
+# print(countWays(4))#:Output:5
+
+
+#----Q:------Write a function sayDigit which takes an integer n and print its english  dsecription.e.g 412 : "four one two"
+
+# def sayDigit(number):
+#     mapArray = ["one" , "two" , "three" , "four" , "five" , "six" , "seven" , "eight" , "nine"]
+#     if number == 0:
+#         return
+    
+#     digit = number % 10
+#     number = (int)(number / 10)
+#     sayDigit(number)
+#     print(mapArray[digit - 1] , end = " ")
+
+
+# sayDigit(429)    
+
+
+
+
+
+
+
+
 
 
 
