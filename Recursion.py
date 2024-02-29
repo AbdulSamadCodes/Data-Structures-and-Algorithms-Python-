@@ -91,6 +91,53 @@
 # sayDigit(429)    
 
 
+#----Q:------Write a function using recursion which tells whether the array  s sorted or not.You will be given the length of array as n.
+
+# def  isSorted(arr , n):
+#     count = 0
+#     count+=1
+#     if (n == 0 or n == 1):
+#         return True
+#     if (arr[0] > arr[1]):
+#         return False
+#     else:
+#         ans = isSorted(arr[count:] , n - 1)
+#         return ans
+    
+    
+# array = [1, 4 ,5 ,9 ,9]
+# size = len(array)
+
+# array2 = [23,56,34,3200]
+# size2 = len(array2)
+
+# print(isSorted(array , size))#Output:True
+# print(isSorted(array2 , size2))#Output:False
+
+
+#----Q:------Write a program using recursion to find sum of an array------------.
+
+# def sumOfArray(arr , n):
+#   if n == 0:
+#     return 0
+#   if n == 1:
+#     return arr[0]
+  
+#   count = 0
+#   count+=1
+
+#   remaining =  sumOfArray(arr[count:] , n -1)
+#   sum = arr[0] + remaining
+#   return sum
+
+# array = [1, 4 ,5 ,9 ,9]
+# size = len(array)
+# print(sumOfArray(array , size))#Output:28
+
+print(4 // 3)
+  
+
+
 
 
 
