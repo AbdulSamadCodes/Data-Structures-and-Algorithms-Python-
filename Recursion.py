@@ -45,6 +45,20 @@
 
 # reverseCounting(10)#Output:10 9 8 7 6 5 4 3 2 1     
 
+
+#-----Q:-------Write a program which gives the sum of natural numbers from 1 to n.----
+
+# def sumOfNaturalNumbers(n , sum):
+#     if n == 0:
+#         print(sum)
+#         return
+    
+#     sum+=n
+#     sumOfNaturalNumbers(n - 1 , sum)
+
+# sumOfNaturalNumbers(6 , 0)#:Output:21
+
+
 #-----Q:-------Write a program to give nth fibonnaci number----------.
 
 # def nthFibonacciNumber(n):
@@ -57,6 +71,27 @@
 
 # print(nthFibonacciNumber(9))#:Output:21
 # print(nthFibonacciNumber(10))#:Output:34
+
+#-----Q:-------Write a program to print fibonnaci series till nth term----------.
+
+# def printFibonacci(n , a , b):
+#     if n == 0:
+#         return
+#     c = a + b
+#     print(c )
+#     printFibonacci(n - 1 , b , c)
+
+# a = 0
+# b = 1
+# print(a)
+# print(b)
+# n = 7
+# printFibonacci(n - 2 , a , b)
+
+
+
+
+
 
 
 
@@ -134,7 +169,49 @@
 # size = len(array)
 # print(sumOfArray(array , size))#Output:28
 
-print(4 // 3)
+
+#----Q:------Write a program using recursion to find x to the power of n(stack height == n)------------.
+
+# def calcpower(x , n):
+#     if n == 0:
+#         return 1
+#     if x == 0:
+#         return 0
+    
+#     ans = x * calcpower(x , n - 1)
+#     return ans
+
+# base = 8
+# power  = 3
+# print(calcpower(base , power))
+
+
+#----Q:------Write a program using recursion to find x to the power of n(stack height == log(n))------------.
+
+# def calcPowerLogn(x , n):
+#     if n == 0:
+#         return 1
+#     if x == 0:
+#         return 0
+    
+#     if (n % 2 == 0):
+#         return calcPowerLogn(x , (int)(n / 2)) * calcPowerLogn(x , (int)(n / 2))
+#     else:
+#         return calcPowerLogn(x , (int)(n / 2)) * calcPowerLogn(x , (int)(n / 2)) * x
+    
+
+# base = 16
+# power = 3
+# print(calcPowerLogn(base , power))#Output:4096
+
+
+
+
+
+
+
+
+
   
 
 
