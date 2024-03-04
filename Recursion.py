@@ -74,25 +74,19 @@
 
 #-----Q:-------Write a program to print fibonnaci series till nth term----------.
 
-# def printFibonacci(n , a , b):
-#     if n == 0:
-#         return
-#     c = a + b
-#     print(c )
-#     printFibonacci(n - 1 , b , c)
+def printFibonacci(n , a , b):
+    if n == 0:
+        return
+    c = a + b
+    print(c )
+    printFibonacci(n - 1 , b , c)
 
-# a = 0
-# b = 1
-# print(a)
-# print(b)
-# n = 7
-# printFibonacci(n - 2 , a , b)
-
-
-
-
-
-
+a = 0
+b = 1
+print(a)
+print(b)
+n = 7
+printFibonacci(n - 2 , a , b)
 
 
 #-----Q:-------------Important leetcode problems---------------------
@@ -203,6 +197,32 @@
 # base = 16
 # power = 3
 # print(calcPowerLogn(base , power))#Output:4096
+
+
+
+#----Q:------Write a program using recursion to implement linear search------------.
+
+
+# def recursiveLinearSearch(arr , n , key):
+#      if n == 0:
+#         return False
+#      else:
+#         if (arr[0] == key):
+#             return True
+#         count = 0
+#         count+=1
+#         return recursiveLinearSearch(arr[count:] , n - 1, key )
+        
+# array = [6 , 3, 56 , 67 , 8]
+# size = len(array)
+# target = 67
+# print(recursiveLinearSearch(array , size , target))#Output:True
+
+    
+
+
+
+    
 
 
 
