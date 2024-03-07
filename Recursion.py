@@ -139,6 +139,120 @@
 # sayDigit(967)
 
        
+#----Write a function using recursion which tells  whether the array is sorted or not.You are given length of array as n---.
+
+# def isSorted(arr , n):
+
+#     if n == 0 or n == 1:
+#         return True
+    
+#     if arr[n - 1] < arr[n -2]:
+#         return False
+    
+#     return isSorted(arr , n - 1)
+
+# array = [10 , 20 , 12 , 30 , 45]
+# length = len(array)
+# print(isSorted(array , length))#Output:False
+
+# array2 =[1 , 4 , 5 ,78 , 78]
+# length2 = len(array2)
+# print(isSorted(array2 , length2))#Output:True
+
+#----Write a function using recursion to  return the sum of the array----.
+
+# def sumOfArray(array , n):
+#     if n == 0:
+#        return 0
+
+#     return array[n - 1] + sumOfArray(array , n - 1) 
+    
+# array = [10 ,45 , 3 ,67]
+# length = len(array)
+# print(sumOfArray(array , length))#Output:125
+
+
+
+#----Write a function using recursion to  perform linear search.The function should return the index of the target value.If it is not present then it should return -1----.
+
+# def linearSearch(arr , n , k):
+#     if n == 0:
+#         return -1
+    
+#     if (arr[n - 1] == k):
+#         return n - 1
+    
+#     return linearSearch(arr , n - 1 , k)
+
+
+# array = [10 ,34 , 56 ,2 ,6]
+# length = len(array)
+# target_value = 34
+# print(linearSearch(array , length , target_value))#Output:1
+
+# array_2 = [45 , 6 , 79]
+# length2 = len(array_2)
+# target = 78
+# print(linearSearch(array_2 , length2 , target))#Output:-1
+
+#:-------Write a function which gives the minimum and maximum of input array in the result array
+
+def maxmin(array  , n):
+  ans = []
+  
+  #:==Function for finding maximum
+  def  maximun(array  , n):
+    if n == 0:
+        return array[0]
+    
+    maximum_in_rest = maximun(array , n - 1)
+
+    if (array[n - 1] > maximum_in_rest):
+       return array[n - 1]
+    else:
+       return maximum_in_rest
+
+  #:==Function for finding minimum
+  def minimum(array , n):
+     if n == 0:
+        return array[0]
+     
+     minimum_in_rest = minimum(array , n - 1)
+
+     if(array[n - 1] < minimum_in_rest):
+        return array[n - 1]
+     else:
+        return minimum_in_rest
+     
+  min_value = minimum(array , n)
+  ans.append(min_value)
+  max_value = maximun(array , n)
+  ans.append(max_value)
+
+  return ans
+
+array = [10  , 50 , 40 , 1]
+length = len(array)
+print(maxmin(array , length))#Output:[50 , 1]
+
+        
+      
+       
+
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
