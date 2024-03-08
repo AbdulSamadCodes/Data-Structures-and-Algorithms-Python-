@@ -197,43 +197,47 @@
 
 #:-------Write a function which gives the minimum and maximum of input array in the result array
 
-def maxmin(array  , n):
-  ans = []
+# def maxmin(array  , n):
+#   ans = []
   
-  #:==Function for finding maximum
-  def  maximun(array  , n):
-    if n == 0:
-        return array[0]
+#   #:==Function for finding maximum
+#   def  maximun(array  , n):
+#     if n == 0:
+#         return array[0]
     
-    maximum_in_rest = maximun(array , n - 1)
+#     maximum_in_rest = maximun(array , n - 1)
 
-    if (array[n - 1] > maximum_in_rest):
-       return array[n - 1]
-    else:
-       return maximum_in_rest
+#     if (array[n - 1] > maximum_in_rest):
+#        return array[n - 1]
+#     else:
+#        return maximum_in_rest
 
-  #:==Function for finding minimum
-  def minimum(array , n):
-     if n == 0:
-        return array[0]
+#   #:==Function for finding minimum
+#   def minimum(array , n):
+#      if n == 0:
+#         return array[0]
      
-     minimum_in_rest = minimum(array , n - 1)
+#      minimum_in_rest = minimum(array , n - 1)
 
-     if(array[n - 1] < minimum_in_rest):
-        return array[n - 1]
-     else:
-        return minimum_in_rest
+#      if(array[n - 1] < minimum_in_rest):
+#         return array[n - 1]
+#      else:
+#         return minimum_in_rest
      
-  min_value = minimum(array , n)
-  ans.append(min_value)
-  max_value = maximun(array , n)
-  ans.append(max_value)
+#   min_value = minimum(array , n)
+#   ans.append(min_value)
+#   max_value = maximun(array , n)
+#   ans.append(max_value)
 
-  return ans
+#   return ans
 
-array = [10  , 50 , 40 , 1]
-length = len(array)
-print(maxmin(array , length))#Output:[50 , 1]
+# array = [10  , 50 , 40 , 1]
+# length = len(array)
+# print(maxmin(array , length))#Output:[50 , 1]
+
+
+
+
 
         
       
