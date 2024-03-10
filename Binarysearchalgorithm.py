@@ -42,25 +42,25 @@
 #         else:
 #             start = midIndex + 1
             
-#     start = 0
-#     end = n - 1
-#     lastOccurrence = -1
-#     while start <= end:
-#         midIndex = start + (end - start // 2)
-#         if arr[midIndex] == x:
-#             lastOccurrence = midIndex
-#             start = midIndex + 1
-#         elif arr[midIndex] >  x:
-#             end = midIndex - 1
-#         else:
-#             start = midIndex + 1   
+# #     start = 0
+# #     end = n - 1
+# #     lastOccurrence = -1
+# #     while start <= end:
+# #         midIndex = start + (end - start // 2)
+# #         if arr[midIndex] == x:
+# #             lastOccurrence = midIndex
+# #             start = midIndex + 1
+# #         elif arr[midIndex] >  x:
+# #             end = midIndex - 1
+# #         else:
+# #             start = midIndex + 1        
             
-#     return lastOccurrence - firstOccurrence + 1    
+# #     return lastOccurrence - firstOccurrence + 1    
                        
-# arr = [5 ,7, 7, 7 ,8 ,8, 8]  
-# n = len(arr)
-# x = 8
-# print(find(arr,n,x))
+# # arr = [5 ,7, 7, 7 ,8 ,8, 8]  
+# # n = len(arr)
+# # x = 9
+# # print(find(arr,n,x))
 
 
 #Q:Find the peak index in a mountain array.

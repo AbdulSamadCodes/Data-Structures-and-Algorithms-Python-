@@ -361,13 +361,6 @@
 # print(mergeSortedArrays(array1 , array2 , n , m))
 
 
-#Q:You are given two sorted arrays.Merge ten such that the result should be stored in first array itsef.The empty spaces in the first array will be equal to the length m of second array.
-
-
-
-
-
-
 #Q:You are given an array of integer,move all zeroes in it to the end and you have to do it while mantaining the relative order of non-zero elements.
 
 # def moveZeroes(arr , n):
@@ -493,6 +486,12 @@
 # array = [16,17,4,3,5,2]
 # n = len(array)
 # print(leaders(array , n))
+
+#--Q:You are given an unsorted array , sort the negative and positive elemnts alternately such that posiive come first and then comes negative.
+
+
+
+
 
 
                

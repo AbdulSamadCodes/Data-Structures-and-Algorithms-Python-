@@ -2,19 +2,19 @@
 
 #Q:-------Given an integer n, Check if the number is prime or not.
 
-def checkPrime(n):
-    count = 0
-    i = 1
-    while i * i <= n:
-        if (n % i) == 0:
-            count+=1
-            if ((n / i) != i):
-                count+=1
-        i+=1        
-    return count == 2
+# def checkPrime(n):
+#     count = 0
+#     i = 1
+#     while i * i <= n:
+#         if (n % i) == 0:
+#             count+=1
+#             if ((n / i) != i):
+#                 count+=1
+#         i+=1        
+#     return count == 2
 
 
-print(checkPrime(4))#:Output:True
+# print(checkPrime(29))#:Output:True
 
 
 #Q:---------Given an integer n, return the sum of its factors.
