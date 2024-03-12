@@ -5,7 +5,7 @@
 def partition(arr  , start , end):
     count  = 0
     for i in range(start + 1 , end + 1):
-        if(arr[i] < arr[start]):
+        if(arr[i] <= arr[start]):
             count+=1
     pivot_index = start  + count
     arr[start] , arr[pivot_index] = arr[pivot_index] , arr[start]
@@ -37,7 +37,7 @@ def quickSort(array , start , end):
     p_index = partition(array , start , end)
 
     #Recursive call for sorting the left part
-    quickSort(array , start , p_index)
+    quickSort(array , start , p_index - 1)
 
     #Recursive call for sorting the right part
     quickSort(array , p_index + 1 , end)
