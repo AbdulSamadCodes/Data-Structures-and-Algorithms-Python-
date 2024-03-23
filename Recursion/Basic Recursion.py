@@ -138,7 +138,6 @@
 # sayDigit(243)    
 # sayDigit(967)
 
-       
 #----Write a function using recursion which tells  whether the array is sorted or not.You are given length of array as n---.
 
 # def isSorted(arr , n):
@@ -234,6 +233,41 @@
 # array = [10  , 50 , 40 , 1]
 # length = len(array)
 # print(maxmin(array , length))#Output:[50 , 1]
+
+
+#Q:===Write a function using rescurion to print sum first of n numbers
+
+# def sum_N_Numbers(n):
+#     if (n == 0):
+#       return n
+#     if (n == 1):
+#       return n
+    
+#     return n + sum_N_Numbers(n - 1)
+
+# print(sum_N_Numbers(3))#Output:6
+# print(sum_N_Numbers(4))#Output:10
+    
+#:===Write a recursuve function to reverse an array.
+
+def reverseArray(arr , left , right):
+  if (left > right):
+    return arr
+  
+  arr[left] , arr[right] = arr[right] , arr[left]
+  return  reverseArray(arr ,left +  1 , right - 1)
+
+array = [1 , 2 , 5 , 9]
+left = 0
+right = len(array) - 1
+print(reverseArray(array , left , right))
+
+
+
+
+    
+
+    
 
 
 
