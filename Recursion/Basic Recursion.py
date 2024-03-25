@@ -158,19 +158,6 @@
 # length2 = len(array2)
 # print(isSorted(array2 , length2))#Output:True
 
-#----Write a function using recursion to  return the sum of the array----.
-
-# def sumOfArray(array , n):
-#     if n == 0:
-#        return 0
-
-#     return array[n - 1] + sumOfArray(array , n - 1) 
-    
-# array = [10 ,45 , 3 ,67]
-# length = len(array)
-# print(sumOfArray(array , length))#Output:125
-
-
 
 #----Write a function using recursion to  perform linear search.The function should return the index of the target value.If it is not present then it should return -1----.
 
@@ -300,6 +287,72 @@
 # length = len(array)
 # print(bubbleSort(array , length))
 
+
+#Q:====Write a recursive to check whether the given array is sorted or not
+
+# def isSorted(arr , index = 0):
+#     #Base case
+#     if(len(arr) == 1  or len(arr) == 0):
+#       return True
+  
+#     if (arr[0] > arr[1]):
+#       return False 
+       
+#     return isSorted(arr[index + 1:])
+
+# array = [10 , 4 , 32 , 67 , 89]
+# print(isSorted(array))#False
+
+# array2 = [12 , 19  , 32 , 45 , 56]
+# print(isSorted(array2))#True
+
+
+#Q----Write a function using recursion to  return the sum of the array----.
+
+# def arraySum(arr ,  index = 0):
+#     if len(arr) == 0:
+#        return 0
+    
+#     if(len(arr) == 1):
+#        return arr[0]
+    
+#     remaining_part = arraySum(arr[index + 1:])
+#     sum = arr[0] + remaining_part
+#     return sum
+
+
+# array = [10 , 45 , 6 , 7 , 9]
+# print(arraySum(array))
+
+
+#Q====:Write a function to perform linear search  using recursion=======
+
+# def linearSearch(arr , key ,index = 0):
+#     if (index == len(arr)):
+#        return -1
+   
+#     if (arr[index] == key):
+#        return index
+        
+#     return linearSearch(arr ,key , index + 1)
+
+# array = [32 , 23 , 4 , 56 , 67]
+# key = 56
+# print(linearSearch(array , key))#Output:3
+  
+    
+    
+
+
+    
+    
+       
+    
+    
+    
+
+    
+    
   
     
 
