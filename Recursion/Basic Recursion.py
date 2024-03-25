@@ -286,19 +286,19 @@
 
 #===Q:Write a function using recursion to sort an array.
 
-def bubbleSort(arr , n):
-  if n == 0 or n == 1:
-    return arr
+# def bubbleSort(arr , n):
+#   if n == 0 or n == 1:
+#     return arr
   
-  for i in range(n - 1):
-    if(arr[i] > arr[i + 1]):
-      arr[i] , arr[i + 1] = arr[i+ 1] , arr[i]
+#   for i in range(n - 1):
+#     if(arr[i] > arr[i + 1]):
+#       arr[i] , arr[i + 1] = arr[i+ 1] , arr[i]
 
-  return bubbleSort(arr , n -1)
+#   return bubbleSort(arr , n -1)
 
-array = [10 , 45 , 3 , 2 , 1]
-length = len(array)
-print(bubbleSort(array , length))
+# array = [10 , 45 , 3 , 2 , 1]
+# length = len(array)
+# print(bubbleSort(array , length))
 
   
     
